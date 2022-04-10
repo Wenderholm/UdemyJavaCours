@@ -1,4 +1,4 @@
-package com.company.equalSum;
+package com.company.ifAndIfElseExercises.equalSum;
 
 public class EqualSum {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.company.speedConventer;
+package com.company.ifAndIfElseExercises.speedConventer;
 
 public class SpeedConverter {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.company.barkingDog;
+package com.company.ifAndIfElseExercises.barkingDog;
 
 public class BarkingDog {
     public static void main(String[] args) {

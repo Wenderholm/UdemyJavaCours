@@ -1,4 +1,4 @@
-package com.company.konstruktorTask;
+package com.company.construktorExercises.konstruktorTask;
 
 public class Account {
     private String number;
@@ -13,6 +13,11 @@ public class Account {
         this.customerNumber = customerNumber;
         this.customerEmailAddress = customerEmailAddress;
         this.customerPhoneNumber = customerPhoneNumber;
+    }
+
+    public Account() {
+        this("4444", 5, "78998732", "nowy@wp.pl","4859564123");
+        System.out.println("Empty constructor called");
     }
 
     public String getNumber() {
@@ -54,8 +59,6 @@ public class Account {
     public void setCustomerPhoneNumber(String customerPhoneNumber) {
         this.customerPhoneNumber = customerPhoneNumber;
     }
-
-
     public void deposit( double depositAmount ){
         this.balance += depositAmount;
         System.out.println("deposit of " + depositAmount + "PLN. New balance is " + this.balance);

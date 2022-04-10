@@ -1,4 +1,4 @@
-package com.company.switchStat;
+package com.company.switchExercises.switchStat;
 
 public class SwitchStatement {
     public static void main(String[] args) {

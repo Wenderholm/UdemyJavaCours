@@ -1,4 +1,4 @@
-package com.company.codeBlock;
+package com.company.ifAndIfElseExercises.codeBlock;
 
 public class CodeBlock {
     public static void main(String[] args) {

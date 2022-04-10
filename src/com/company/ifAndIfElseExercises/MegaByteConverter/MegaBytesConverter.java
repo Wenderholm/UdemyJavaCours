@@ -1,4 +1,4 @@
-package com.company.MegaByteConverter;
+package com.company.ifAndIfElseExercises.MegaByteConverter;
 
 public class MegaBytesConverter {
     public static void main(String[] args) {

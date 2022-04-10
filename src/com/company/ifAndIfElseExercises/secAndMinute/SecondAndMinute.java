@@ -1,4 +1,4 @@
-package com.company.secAndMinute;
+package com.company.ifAndIfElseExercises.secAndMinute;
 
 
 public class SecondAndMinute {

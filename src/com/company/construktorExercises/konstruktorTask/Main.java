@@ -1,4 +1,4 @@
-package com.company.konstruktorTask;
+package com.company.construktorExercises.konstruktorTask;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,5 +7,8 @@ public class Main {
         aco1.deposit(1000);
         aco1.withdrawFound(200000);
 
-    }
+        Account aco2 = new Account();
+
+        aco2.getBalance();
+       }
 }

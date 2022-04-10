@@ -1,4 +1,4 @@
-package com.company.leapYear;
+package com.company.ifAndIfElseExercises.leapYear;
 
 public class LeapYear {
     public static void main(String[] args) {
