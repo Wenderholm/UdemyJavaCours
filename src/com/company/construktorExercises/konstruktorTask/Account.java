@@ -3,22 +3,27 @@ package com.company.construktorExercises.konstruktorTask;
 public class Account {
     private String number;
     private double balance;
-    private String customerNumber;
+    private String customerName;
     private String customerEmailAddress;
     private String customerPhoneNumber;
 
-    public Account(String number, double balance, String customerNumber, String customerEmailAddress, String customerPhoneNumber) {
+    public Account(String number, double balance, String customerName, String customerEmailAddress, String customerPhoneNumber) {
         this.number = number;
         this.balance = balance;
-        this.customerNumber = customerNumber;
+        this.customerName = customerName;
         this.customerEmailAddress = customerEmailAddress;
         this.customerPhoneNumber = customerPhoneNumber;
     }
 
     public Account() {
-        this("4444", 5, "78998732", "nowy@wp.pl","4859564123");
+        this("4444", 5, "Roman", "nowy@wp.pl","4859564123");
         System.out.println("Empty constructor called");
     }
+
+    public Account(String customerNumber, String customerEmailAddress, String customerPhoneNumber) {
+        this("9999", 450.0,customerNumber, customerEmailAddress,customerPhoneNumber);
+    }
+
 
     public String getNumber() {
         return number;
@@ -36,12 +41,12 @@ public class Account {
         this.balance = balance;
     }
 
-    public String getCustomerNumber() {
-        return customerNumber;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setCustomerNumber(String customerNumber) {
-        this.customerNumber = customerNumber;
+    public void setCustomerName(String customerNumber) {
+        this.customerName = customerName;
     }
 
     public String getCustomerEmailAddress() {
