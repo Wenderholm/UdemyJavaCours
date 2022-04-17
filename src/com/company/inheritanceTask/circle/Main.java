@@ -1,4 +1,4 @@
-package com.company.circle;
+package com.company.inheritanceTask.circle;
 
 public class Main {
     public static void main(String[] args) {

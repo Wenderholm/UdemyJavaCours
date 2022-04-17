@@ -1,4 +1,4 @@
-package com.company.circle;
+package com.company.inheritanceTask.circle;
 
 public class Circle {
     private double radius;

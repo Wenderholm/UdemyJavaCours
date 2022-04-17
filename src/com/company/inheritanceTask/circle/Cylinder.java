@@ -1,4 +1,4 @@
-package com.company.circle;
+package com.company.inheritanceTask.circle;
 
 public class Cylinder extends Circle{
     private double height;
