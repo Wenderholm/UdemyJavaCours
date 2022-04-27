@@ -18,9 +18,7 @@ public class ArrayExercise {
     }
 
     public static int[] getInteger(int number ){
-        System.out.println("podaj " + number + "\r");
         int[] values = new int[number];
-
         for (int i = 0; i < values.length; i++) {
             values[i] = scanner.nextInt();
         }
