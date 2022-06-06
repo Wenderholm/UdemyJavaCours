@@ -1,4 +1,4 @@
-package com.company.genericClass;
+package com.company.genericClass.trainingTask;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.company.genericClass;
+package com.company.genericClass.genericChallenge;
 
 public abstract class Player {
     private String name;
