@@ -1,4 +1,4 @@
-package com.company.immutableClass;
+package com.company.mapExercises.immutableClass;
 
 import java.util.HashMap;
 import java.util.Map;

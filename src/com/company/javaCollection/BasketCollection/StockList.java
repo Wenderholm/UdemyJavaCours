@@ -48,12 +48,14 @@ public class StockList {
     public String toString() {
         String s = "\nStock list\n";
         double totalCost = 0.0;
+//        przejscie po wszystkich elementach listy z wyciagnięciem klucza i wartości
         for(Map.Entry<String,StockItem> item : list.entrySet()){
             StockItem stockItem = item.getValue();
             double itemValue = stockItem.getPrice() * stockItem.quantityInStock();
 
             s = s + stockItem + ". There are " + stockItem.quantityInStock() + " in stock. Value of items: ";
-            s = s +itemValue + "\n";
+//            wpianie string.format do zaokrąglenia wyniku do dwóch miejsc po przecinku
+            s = s + String.format("%.2f",itemValue) + "\n";
             totalCost += itemValue;
 
         }
