@@ -2,63 +2,71 @@ package com.company.javaCollection.BasketCollection;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class StockList {
     private final Map<String, StockItem> list;
 
     public StockList() {
-        this.list = new HashMap<>();
+        this.list = new LinkedHashMap<>();
     }
 
-    public int addStock(StockItem item){
-//        jeżeli dodawany item jest różny od null
-        if(item != null){
-
+    public int addStock(StockItem item) {
+        if(item != null) {
+            // check if already have quantities of this item
             StockItem inStock = list.getOrDefault(item.getName(), item);
-
-            if (inStock != item){
+            // If there are already stocks on this item, adjust the quantity
+            if(inStock != item) {
                 item.adjustStock(inStock.quantityInStock());
             }
-            list.put(item.getName(),item);
+
+            list.put(item.getName(), item);
             return item.quantityInStock();
         }
         return 0;
     }
-// sprzedaż obiektu (itemu ) ze zmiana pojemności/dostępności
-    public int sellStock(String item, int quantity){
-        StockItem inStock = list.getOrDefault(item,null);
-        if((inStock != null) && (inStock.quantityInStock() >= quantity) && (quantity > 0)){
+
+    public int sellStock(String item, int quantity) {
+        StockItem inStock = list.getOrDefault(item, null);
+
+        if((inStock != null) && (inStock.quantityInStock() >= quantity) && (quantity >0)) {
             inStock.adjustStock(-quantity);
             return quantity;
         }
         return 0;
     }
 
-//    wyciągnięcie nazwy obiektu z mapy przez jego klucz
-    public StockItem get(String key){
+    public StockItem get(String key) {
         return list.get(key);
     }
-//zabezpieczenie przed możliwością zmianby kolekcji
-    public Map<String, StockItem> Items(){
+
+    public Map<String, Double> PriceList() {
+        Map<String, Double> prices = new LinkedHashMap<>();
+        for(Map.Entry<String, StockItem> item : list.entrySet()) {
+            prices.put(item.getKey(), item.getValue().getPrice());
+        }
+        return Collections.unmodifiableMap(prices);
+    }
+
+    public Map<String, StockItem> Items() {
         return Collections.unmodifiableMap(list);
     }
 
     @Override
     public String toString() {
-        String s = "\nStock list\n";
+        String s = "\nStock List\n";
         double totalCost = 0.0;
-//        przejscie po wszystkich elementach listy z wyciagnięciem klucza i wartości
-        for(Map.Entry<String,StockItem> item : list.entrySet()){
+        for (Map.Entry<String, StockItem> item : list.entrySet()) {
             StockItem stockItem = item.getValue();
+
             double itemValue = stockItem.getPrice() * stockItem.quantityInStock();
 
             s = s + stockItem + ". There are " + stockItem.quantityInStock() + " in stock. Value of items: ";
-//            wpianie string.format do zaokrąglenia wyniku do dwóch miejsc po przecinku
             s = s + String.format("%.2f",itemValue) + "\n";
             totalCost += itemValue;
-
         }
-        return s + "Total stock value: " + totalCost;
+
+        return s + "Total stock value " + totalCost;
     }
 }
