@@ -9,6 +9,7 @@ public class Main {
 
         long longVariable = 50_000L + (10L *(byteVariable+shortVariable+intVariable));
         System.out.println(longVariable);
+
     }
 
 }
