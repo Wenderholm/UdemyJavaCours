@@ -1,4 +1,4 @@
-package com.company.linkedList.demo;
+package com.company.linkedList.demo_zadanieMiasta;
 
 import java.util.Iterator;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package com.company.abstractExercise;
+package com.company.abstractExercise.Animal_test;
 
 public class Dog extends Animal {
 
