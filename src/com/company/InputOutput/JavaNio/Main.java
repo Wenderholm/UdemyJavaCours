@@ -16,6 +16,7 @@ public class Main {
         try (FileOutputStream binFile= new FileOutputStream("data.dat");
              FileChannel binChannel = binFile.getChannel()){
             byte[] outputBytes = "Hello World!".getBytes();
+
             ByteBuffer buffer = ByteBuffer.wrap(outputBytes);
             int numBytes = binChannel.write(buffer);
             System.out.println("numBytes written was: " + numBytes);
@@ -47,6 +48,7 @@ public class Main {
             System.out.println(intBuffer.getInt(0));
             intBuffer.flip();
             numBytesRead = channel.read(intBuffer);
+            intBuffer.flip();
             System.out.println(intBuffer.getInt(0));
 
 //            RELATIVE READ
