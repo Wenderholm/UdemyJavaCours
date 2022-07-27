@@ -1,4 +1,4 @@
-package com.company.InputOutput.JavaNIO;
+package com.company.InputOutput.ObjectInputAndOutput_seralization;
 
 import java.util.HashMap;
 import java.util.Map;
